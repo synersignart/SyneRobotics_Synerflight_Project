@@ -1,0 +1,48 @@
+
+www.Synerflight.Com
+
+##########################################################################################
+SynerduinoKwad Open in Arduino IDE
+##########################################################################################
+SynerduinoKwad.ino 
+
+##########################################################################################
+Hexfile  Use for Hex uploader to upload to arduino board the present firmware
+##########################################################################################
+SynerduinoKwad3-GY91.ino.hex
+SynerduinoKwad3-GY801.ino.hex
+SynerduinoKwad3-GY801(invertMag).ino.hex
+
+
+##########################################################################################
+Sensors Update
+##########################################################################################
+Note this supports the alternative QMC 5883 over the HMC L883 compass  as supplied on some shop
+     2017 QMC 5883
+sept 2020 Added AK AK8963
+sept 2020 Added BMP280
+
+Jan  2016 MPU-9250
+COnfigured it as independent sensors: 6050, BMP280, AK8975
+Modified the address for the 6050 to 0x69
+
+Address of BM280 0x77
+
+MPU9255, that is almost the same from MPU9250. The main diference for our porpoise is de ID, that is 0x71 for MPU9250 and 0x73 for MPU9255. So you need to change this ID in the header from Library (the default is for MPU9255). The diference between the two solutions is that de MPU9255 is for use within Automatic Activity Recognition library.
+
+##########################################################################################
+GPS Parameter use for Ucenter-GPS config
+##########################################################################################
+Ublk GPS.ubx
+
+##########################################################################################
+FlywiiGUI SynerduinoKwad PID
+##########################################################################################
+450flamewheel .mws
+250 mini .mws
+
+Parameters Flight Tuning files to be loaded using the Flywiigui 
+
+New implementation Sepr 27/9/2021
+
+GY91 IMU sensor sets
