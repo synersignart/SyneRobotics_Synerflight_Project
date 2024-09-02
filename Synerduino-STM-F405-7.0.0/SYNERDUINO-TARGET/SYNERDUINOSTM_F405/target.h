@@ -94,17 +94,22 @@
 #define MAX7456_SPI_BUS         BUS_SPI2
 #define MAX7456_CS_PIN          PC1
 
-// *************** SPI3 Flash/SD Card  ****************
-#define USE_SPI_DEVICE_3
-#define SPI3_SCK_PIN            PC10
-#define SPI3_MISO_PIN   	    PC11
-#define SPI3_MOSI_PIN   	    PC12
-
-//#if defined(SYNERDUINOSTM_F405)
+// *************** SPI3 Flash/SD Card  ****************uncomment to use SPI3
+//#define USE_SPI_DEVICE_3
+//#define SPI3_SCK_PIN            PC10
+//#define SPI3_MISO_PIN   	    PC11
+//#define SPI3_MOSI_PIN   	    PC12
+// ***************  SD BLACKBOX*******************
 #define USE_SDCARD
-#define USE_SDCARD_SPI
-#define SDCARD_SPI_BUS          BUS_SPI3
-#define SDCARD_CS_PIN           PA15
+// *************** SPI SD *******************uncomment to use SPI3
+//#define USE_SDCARD_SPI
+//#define SDCARD_SPI_BUS          BUS_SPI3
+//#define SDCARD_CS_PIN           PA15
+
+// *************** SDIO SD *******************uncomment to use SDIO
+#define USE_SDCARD_SDIO
+//#define SDCARD_SDIO_DEVICE      SDIODEV_1
+#define SDCARD_SDIO_4BIT
 #define ENABLE_BLACKBOX_LOGGING_ON_SDCARD_BY_DEFAULT
 //#else
 //#   define USE_FLASHFS
@@ -217,14 +222,14 @@
 #define USE_PINIO
 #define USE_PINIOBOX
 #define PINIO1_PIN                  PA4
-#define PINIO2_PIN                  PB5
+#define PINIO2_PIN                  PA5
 
 // *************** LEDSTRIP ************************
 #define USE_LED_STRIP
 #define WS2811_PIN                  PB1
 
 // ***************  OTHERS *************************
-#define DEFAULT_FEATURES        (FEATURE_TX_PROF_SEL | FEATURE_OSD | FEATURE_CURRENT_METER | FEATURE_VBAT | FEATURE_TELEMETRY | FEATURE_SOFTSERIAL )
+#define DEFAULT_FEATURES        (FEATURE_TX_PROF_SEL | FEATURE_CURRENT_METER | FEATURE_VBAT | FEATURE_TELEMETRY | FEATURE_SOFTSERIAL ) //FEATURE_OSD | 
 #define VBAT_SCALE_DEFAULT      2100
 #define CURRENT_METER_SCALE     423 
 
